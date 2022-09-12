@@ -4,15 +4,14 @@ import { QuizContext } from '../contexts/QuizContext'
 import { WelcomeContainer } from './Welcome.styles'
 
 export function Welcome(){
-  const quizState = useContext(QuizContext);
-  console.log(quizState)
+  const [quizState, dispatch] = useContext(QuizContext);
 
   return(
     <WelcomeContainer>
       <div id='welcome'>
         <h2>Seja bem-vindo</h2>
         <p>Clique no botão abaixo para começar</p>
-        <button>Iniciar</button>
+        <button onClick={() => dispatch({type: "CHANGE_STATE"})}>Iniciar</button>
         <img src={quiz} alt="início do quiz" />
       </div>
     </WelcomeContainer>  
