@@ -6,6 +6,8 @@ import { WelcomeContainer } from './Welcome.styles'
 export function Welcome(){
   const [quizState, dispatch] = useContext(QuizContext);
 
+  const num = 0;
+
   return(
     <WelcomeContainer>
       <div id='welcome'>
@@ -13,6 +15,7 @@ export function Welcome(){
         <p>Clique no botão abaixo para começar</p>
         <button onClick={() => dispatch({type: "CHANGE_STATE"})}>Iniciar</button>
         <img src={quiz} alt="início do quiz" />
+        <p>{Math.random(num) - 0.5}</p>
       </div>
     </WelcomeContainer>  
   )
