@@ -7,8 +7,13 @@ export function Question(){
   console.log(quizState)
 
   return(
-    <div>
-      <h3>Question</h3>
+    <div id="question">
+      <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
+      <h2>Pergunta atual</h2>
+      <div id="options-container">
+        <p>Opções</p>
+      </div>
+      <button>Continuar</button>
     </div>
   )
 }
