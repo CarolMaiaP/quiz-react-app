@@ -15,6 +15,7 @@ function quizReducer(state, action){
   switch(action.type){
     case "CHANGE_STATE":
       return {
+        ...state,
         gameStage: STAGES[1],
       }
 
