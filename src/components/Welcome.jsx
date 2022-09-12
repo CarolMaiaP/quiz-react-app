@@ -11,11 +11,11 @@ export function Welcome(){
   return(
     <WelcomeContainer>
       <div id='welcome'>
+        <h2>Quiz de Programação</h2>
         <h2>Seja bem-vindo</h2>
         <p>Clique no botão abaixo para começar</p>
         <button onClick={() => dispatch({type: "CHANGE_STATE"})}>Iniciar</button>
         <img src={quiz} alt="início do quiz" />
-        <p>{Math.random(num) - 0.5}</p>
       </div>
     </WelcomeContainer>  
   )

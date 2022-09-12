@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { QuizContext } from "../contexts/QuizContext"
+import { QuestionsContainer } from "./Question.styles";
 
 export function Question(){
   const [quizState, dispatch] = useContext(QuizContext);
@@ -8,13 +9,16 @@ export function Question(){
   console.log(quizState)
 
   return(
-    <div id="question">
-      <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
-      <h2>{currentQuestion.question}</h2>
-      <div id="options-container">
-        <p>Opções</p>
+    <QuestionsContainer>
+      <h2>Quiz de Programação</h2>
+      <div id="question">
+        <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
+        <h2>{currentQuestion.question}</h2>
+        <div id="options-container">
+          <p>Opções</p>
+        </div>
+        <button>Continuar</button>
       </div>
-      <button>Continuar</button>
-    </div>
+    </QuestionsContainer>
   )
 }
