@@ -23,4 +23,8 @@ export const QuestionsContainer = styled.div`
   #question button{
     border: 2px solid #fff;
   }
+
+  #options-container .option p{
+    margin-bottom: 0px;
+  }
 `;
