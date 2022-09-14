@@ -14,4 +14,14 @@ export const OptionContainer = styled.div`
   .option:hover{
     opacity: 1;
   }
+
+  .correct{
+    background-color: #0bfc03;
+    font-weight: bold;
+  }
+
+  .wrong{
+    background-color: #3c0e70;
+    opacity: 0.4;
+  }
 `
