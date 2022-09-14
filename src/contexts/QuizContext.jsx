@@ -50,6 +50,8 @@ function quizReducer(state, action){
       return initialState
 
     case "CHECK_ANSWER":
+      if(state.answerSelected) return state;
+
       console.log(action)
       const answer = action.payload.answer;
       const option = action.payload.option;
