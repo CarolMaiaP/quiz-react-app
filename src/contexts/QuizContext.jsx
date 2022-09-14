@@ -9,6 +9,7 @@ const initialState = {
   questions,
   currentQuestion: 0,
   score: 0,
+  answerSelected: false,
 }
 
 function quizReducer(state, action){

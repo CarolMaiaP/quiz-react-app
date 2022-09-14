@@ -9,6 +9,10 @@ export function Question(){
 
   console.log(quizState)
 
+  const onSelectOption = (option) => {
+    console.log(option)
+  }
+
   return(
     <QuestionsContainer>
       <h2>Quiz de Programação</h2>
@@ -17,10 +21,16 @@ export function Question(){
         <h2>{currentQuestion.question}</h2>
         <div id="options-container">
           {currentQuestion.options.map((option) => (
-            <Option option={option} key={option}/>
+            <Option option={option}
+             key={option}
+             answer={currentQuestion.answer}
+             selectOption={() => onSelectOption(option)} 
+            />
           ))}
         </div>
-        <button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>Continuar</button>
+        {quizState.answerSelected && (
+          <button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>Continuar</button>
+        )}
       </div>
     </QuestionsContainer>
   )
