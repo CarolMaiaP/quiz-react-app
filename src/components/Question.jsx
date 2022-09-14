@@ -10,7 +10,12 @@ export function Question(){
   console.log(quizState)
 
   const onSelectOption = (option) => {
-    console.log(option)
+    console.log(option);
+
+    dispatch({
+      type: "CHECK_ANSWER",
+      payload: {answer: currentQuestion.answer, option}
+    })
   }
 
   return(
